@@ -10,8 +10,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
-import java.util.Date;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -22,8 +20,11 @@ public class Contato {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String telefone;
+
     private String celular;
+
     private String email;
 
 }

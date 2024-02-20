@@ -1,7 +1,6 @@
 package com.Hartwig.ControleTotal.Services;
 
 import com.Hartwig.ControleTotal.Models.Contato;
-import com.Hartwig.ControleTotal.Models.Membro;
 import com.Hartwig.ControleTotal.Repositories.ContatoRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +13,10 @@ public class ContatoService {
     ContatoRepository contatoRepository;
 
     @Transactional
-    public void cadastrarContato(Contato contato) {
+    public Contato cadastrarContato(Contato contato) {
 
         contatoRepository.save(contato);
+        return contato;
     }
 
 }
